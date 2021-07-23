@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">            <!-- 網頁描述，助於搜尋引擎搜尋 -->
+<meta name="author" content="">                 <!-- 網頁作者 -->
+<link rel="icon" href="assets/img/favicon.png"> <!-- 網頁圖標 -->
+<title>遇見幾米</title>						<!-- 網頁標題，務必需要修改 -->
+<!--Stylesheet-->
+<link href="assets/css/bootstrap.css" rel="stylesheet">
+<link href="assets/css/menu.css" rel="stylesheet">
+<link href="assets/css/font-awesome.css" rel="stylesheet">
+<script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js"></script> 
+<link href="assets/css/animate.css" rel="stylesheet">
+<link href="style.css" rel="stylesheet">         <!-- 主要的CSS -->
+<link href="assets/css/skins/mycolor.css" rel="stylesheet"> <!-- 主色CSS -->
+</head>
+<body>
+<div class="page-loader">
+	<img src="assets/img/loader.gif" alt="網頁等待動畫">      <!-- 網頁等待動畫 -->
+</div>
+<!-- Header
+================================================== -->
+<header id="header">
+<div id="mega-menu" class="header header-sticky primary-menu icons-no default-skin zoomIn align-right">
+	<div class="container">
+		<div class="row">
+			<nav class="navbar navbar-default redq" role="navigation">
+			<div class="container">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand large" href="index.html"><img src="assets/img/logo.png" class="light"></a> <!-- 網站LOGO-淺色版 -->
+					<a class="navbar-brand large" href="index.html"><img src="assets/img/logo-dark.png" class="dark" ></a> <!-- 網站LOGO-深色版 -->
+				</div>
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<!-- <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"> -->
+				<div class="collapse navbar-collapse">
+					<a class="navbar-brand mobile pull-left" href="#"><i class="fas fa-plane-departure"></i>Menu<span class="logo-style"></span></a>
+					<a class="mobile-menu-close"><i class="fas fa-plane-departure"></i></a>
+					<ul class="nav navbar-nav nav-list">
+						<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="link-item">首頁</span></a>
+						<ul class="sub-menu">
+							<li><a href="index.html">影音首頁</a></li>
+						</ul>
+						</li>
+						<li>
+						<a href="about.html"><span class="link-item">關於我</span></a>
+						</li>					
+						<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="link-item">幾米繪本</span></a>
+						<ul class="sub-menu">
+							<li><a href="gallery.html">幾米繪本</a></li>
+						</ul>
+						</li>
+						<li>
+						<a href="contact.html"><span class="link-item">與我聯絡</span></a>
+						</li>
+					</ul>
+					<!-- end .nav .navbar-nav -->
+				</div>
+				<!-- end .navbar-collapse -->
+				<!-- </div> -->
+				<!-- end .container-fluid -->
+			</div>
+			<!-- end .container -->
+			</nav>
+			<!-- end nav -->
+		</div>
+		<!-- end .row -->
+	</div>
+	<!-- end .container -->
+</div>
+<!-- end .header -->
+</header>
+<!-- Video
+================================================== -->
+<div class="videowrap" style="overflow:auto; max-height:800px; margin-top:0px;">
+	<div class="video-containeryt">
+		<div id="player" class="youtubevideobg">
+		</div>
+	</div>
+	<div class="videocontent" style="top:50%;">
+		<div class="block2 text-center max80">
+			<h3 style="color:#eff5f7;">
+			<span class="text1 nomargbot wow bounceIn" data-wow-delay="0s" data-wow-duration="1s">
+            只要面對著陽光努力向上<br/>日子就會變得單純而美好<br/></span>
+			</h3>			
+		</div>
+	</div>	
+</div>
+<script>
+	var tag = document.createElement('script');
+	tag.src = 'https://www.youtube.com/iframe_api';
+	var firstScriptTag = document.getElementsByTagName('script')[0];
+	firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+	var player;
+	function onYouTubeIframeAPIReady() {
+	player = new YT.Player('player', {				 
+	  height: '100%',
+	  width: '10%',
+	  videoId: '5ig9OW8Vw_A',
+	  playerVars: { 'autoplay': 1, 'controls': 0, 'rel': 0, 'hd': 1, 'modestbranding': 1, 'loop': 1, 'showinfo':0, 'autohide': 1, 'disablekb': 1 },
+	  events: {
+		'onReady': onPlayerReady,
+		onStateChange: function(e){
+			var id = '5ig9OW8Vw_A';
+			if(e.data === YT.PlayerState.ENDED){
+				player.loadVideoById(id);
+			}
+		}					
+	  }
+	});
+	}			 
+	function onPlayerReady(event) {
+	event.target.playVideo();
+	}
+</script>
+<!-- ＮＥＷＳ
+================================================== -->
+<section id="startcontent" class="page-wrapper gray-d wow zoomIn">
+<div class="container">
+	<h2 class="title">最新消息</h2>
+	<p class="tagline">
+		Latest News
+	</p>
+	<div class="row team-wrap">
+		<div class="col-md-3 col-sm-3 col-xs-12">
+			<div class="team-boxes">
+				<div class="team-thumb overlay-image view-overlay">
+					<img src="assets/img/news/news1.jpg" alt="">
+					<div class="clear">
+					</div>
+					<div class="mask team_quote">
+						<div class="port-zoom-link">
+							<p>
+								<span class="accentcolor" style="font-weight:700;"><a href="news-img-text.html"><span class="false">玩樂</span>宜蘭新景點！超萌幾米兔子廣場</a></span><br/>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="team-info">
+					<h2><a href="news-img-text.html"><span class="false">玩樂</span>宜蘭新景點！礁溪轉運站超萌幾米兔子廣場　在綠色森林和兔兔泡湯</a></h2>
+					<p>
+						 [2021年7月21日]
+					</p>
+				</div>
+				<div class="separator">
+				</div>
+				<div class="team-social">
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3 col-sm-3 col-xs-12">
+			<div class="team-boxes">
+				<div class="team-thumb overlay-image view-overlay">
+					<img src="assets/img/news/fact-3-1.jpg" alt="">
+					<div class="clear">
+					</div>
+					<div class="mask team_quote">
+						<div class="port-zoom-link">
+							<p>
+								<span class="accentcolor" style="font-weight:700;"><a href="news-img.html" target="_blank"><span class="false">藝廊</span>幾米「畫室裡的呢喃」個展亮相誠品畫廊！</a></span><br/>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="team-info">
+					<h2><a href="news-img.html" target="_blank"><span class="false">藝廊</span>幾米「畫室裡的呢喃」個展亮相誠品畫廊！</a></h2>
+					<p>
+						 [2021年7月21日]
+					</p>
+				</div>
+				<div class="separator">
+				</div>
+				<div class="team-social">
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3 col-sm-3 col-xs-12">
+			<div class="team-boxes">
+				<div class="team-thumb overlay-image view-overlay">
+					<img src="assets/img/news/fact-4-1.jpg" alt="">
+					<div class="clear">
+					</div>
+					<div class="mask team_quote">
+						<div class="port-zoom-link">
+							<p>
+								<span class="accentcolor" style="font-weight:700;"><a href="news-img-2.html" target="_blank"><span class="false">秘境</span>跟著幾米玩台灣！</a></span><br/>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="team-info">
+					<h2><a href="news-img-2.html" target="_blank"><span class="false">秘境</span>跟著幾米玩台灣！</a></h2>
+					<p>
+						 [2021年7月22日]
+					</p>
+				</div>
+				<div class="separator">
+				</div>
+				<div class="team-social">
+				</div>
+			</div>
+		</div>
+				<div class="col-md-3 col-sm-3 col-xs-12">
+			<div class="team-boxes">
+				<div class="team-thumb overlay-image view-overlay">
+					<img src="assets/img/news/fact-5-1.jpg" alt="">
+					<div class="clear">
+					</div>
+					<div class="mask team_quote">
+						<div class="port-zoom-link">
+							<p>
+								<span class="accentcolor" style="font-weight:700;"><a href="news-text.html" target="_blank"><span class="false">語錄</span>有沒有一句是在說你的心境？</a></span><br/>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="team-info">
+					<h2><a href="news-text.html" target="_blank"><span class="false">語錄</span>有沒有一句是在說你的心境？</a></h2>
+					<p>
+						 [2021年7月22日]
+					</p>
+				</div>
+				<div class="separator">
+				</div>
+				<div class="team-social">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</section>
+
+<!-- Features
+================================================== -->
+<section class="page-wrapper gray">
+<div class="container">
+	<div class="row">
+		<div class="col-md-3 feature business wow zoomIn" data-wow-duration="0.8s" data-wow-delay="0.1s">
+			<div class="feature-content">
+                <img src="assets/img/news/first.jpg" alt=""><hr/>
+				<h3><i class="fas fa-crow"></i>首度繪本創作</h3>
+				<p>
+                    1998年 《森林裡的祕密》
+                    我在森林裡，藏著好多好多的祕密，有些祕密我也記不得了……
+                    我看到我遺失的夢，在黑暗中微微發著光……
+                    我想再作一個夢！ 
+                    幾米用文學說夢，用圖寫夢，
+                    讓嗜夢者在白天看到了一場無懈可擊的好夢。
+                </p>        
+			</div>
+		</div>
+		<div class="col-md-3 feature business wow zoomIn" data-wow-duration="0.8s" data-wow-delay="0.2s">
+			<div class="feature-content">
+				<h3><i class="fas fa-crow"></i>幾米改編影視之作品與電子書</h3>
+				<p>
+                    不少文學創作會被改編成電視或電影，幾米也有數本作品曾被多次翻拍，其中最廣為人知的便是《向左走．向右走》，除了電影和電視劇之外，音樂劇自2008年起初次公演以來，直至今日已有數個版本，甚至還誕生了電子書。
+                    不論改編成何種作品形式，可以知道的是幾米的作品在不同年齡層的讀者之間仍十分受歡迎。
+				</p>
+                <hr/>
+                <img src="assets/img/news/meet.jpg" alt="">
+			</div>
+		</div>
+		<div class="col-md-3 feature business wow zoomIn" data-wow-duration="0.8s" data-wow-delay="0.3s">
+			<div class="feature-content">
+                <img src="assets/img/news/brand.png" alt=""><hr/>
+				<h3><i class="fas fa-crow"></i>幾米品牌之商品與行銷</h3>
+				<p>
+                    幾米作品授權的商品十分多元，除了文具用品之外，還有配合故事中各式情節所衍生的產品，如水晶球、音樂盒等。另外，還有和悠遊卡、咖啡、保養品公司等各式商品的合作，2015年也搭上了科技熱潮，和電信業者合作AR的攝影導覽APP。
+                </p>  
+			</div>
+		</div>
+        <div class="col-md-3 feature business wow zoomIn" data-wow-duration="0.8s" data-wow-delay="0.3s">
+			<div class="feature-content">
+				<h3><i class="fas fa-crow"></i>幾米品牌與異業合作</h3>
+				<p>
+                    幾米的作品，除了創作部分由出版社負責，其餘皆是「墨色國際」負責，管理幾米出版以外的授權作業。
+                    墨色國際（Jimmy S.P.A. Co., Ltd.）是以經營幾米品牌為原點而成立的一家公司，其中Jimmy取自幾米的英文名字，S代表strategy，P為planning，A是authorization，以非常確立的定位，經紀繪本作家與經營文化品牌。
+                    幾米的繪本作品有深刻的感染力與思想態度，經營「幾米品牌」的墨色國際也堅守一樣的理想性格，在嘗試將幾米作品與不同產業結合的同時，仍由作品的一貫精神與風格出發，著重在創意與創新的發展、藝術與商業的份際平衡、形象與品質的控管等，如此的經營標準使其周邊衍生而出的相關形式與產品得以繼續獲得讀者與消費大眾的認同，創造出繪本前所未有的附加價值。
+				</p>
+                <hr/>
+                <img src="assets/img/news/company.jpg" alt="">
+			</div>
+		</div>
+	</div>
+</div>
+</section>
+
+<!-- About Us
+================================================== -->
+<section class="split">
+<div class="col-md-6" style="min-height:420px;background-size:cover;background-image:url(assets/img/jimmy.jpg);">
+	<div class="overlay" style="background:#303543;opacity:0.2;">
+	</div>
+</div>
+<div class="col-md-6 darkbgcolor" style="min-height:420px;">
+	<h2 align="center" class="title">每一位欣賞他作品的人看到並相信世界上的美與善<br/>同時也反應了現代人生活中的點點滴滴</h2>
+	<p>
+        歐洲媒體如此形容：他是Discovery選出來最知名的台灣人。2011年Swatch以他的插圖製作兔年錶款，還有飛機以他的插畫彩繪機身。他與美國知名青少年圖書作家傑里．斯皮利（Jerry Spinelli）和英國暢銷童書作家喬依絲．唐巴（Joyce Dunbar）都合作過。有人拿他的書和家庭照擺在一起裝飾辦公桌，有人還會一邊嘆息：「我們國家竟然還沒有將他的繪本改拍成電影！」
+	</p>
+    <hr />
+	<p>幾米，本名廖福彬（1958年11月15日－），台灣繪本畫家，筆名來自其英文名Jimmy。幾米畢業於中國文化大學美術系，曾在廣告公司工作十二年，後來為報紙、雜誌等各種出版品畫插畫。 1998年首度在台灣出版個人的繪本創作《森林裡的秘密》、《微笑的魚》。1999年出版的《向左走，向右走》，獲選為1999年金石堂十大最具影響力的書，開創出成人繪本的新型式，興起一股繪本創作風潮。他的作品風靡華人圈，美、法、德、希臘、韓、日、泰國等國家皆有譯本， 學界和媒體多次以「幾米現象」為主題分析評論。</p>
+</div>
+</section>
+
+
+
+<!-- Footer
+================================================== -->
+<section id="footer" class="footer">
+<div class="container">
+	<div class="row">
+		<div class="col-md-8">
+
+			
+				<p class="copyright">2021  Copyright &copy; my website All rights reserved.</p>
+			<p>&nbsp;</p>
+			
+		</div>
+		<div class="col-md-4 text-right">
+			<p class="copyright">
+			<a href="index.html" target="_blank"><img src="assets/img/logo-dark.png"></a>
+			</p>
+			</div>
+	</div>
+</div>
+
+</section>
+<!-- JavaScript
+================================================== -->
+<script src="assets/js/jquery.js"></script>
+<script src="assets/js/bootstrap.js"></script>
+<script src="assets/js/plugins.js"></script>
+<script src="assets/js/parallax.js"></script>
+<script src='assets/js/countto.js'></script>
+<script src="assets/js/portfolio.js"></script>
+<script src="assets/js/scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+2. 以台灣繁體標示即為zh-Hant-TW
+5. <meta name=”viewport”> 是當時 Apple 推出 iPhone 時為了讓網頁在 mobile device 上完好顯示，而設計出來的 meta tag
+14. Font Awesome 是一個基於CSS和LESS的字體和圖標工具套件。
+24. JavaScript 利用 id 属性来处理一段文本，或通过 CSS 为带有指定 id 的元素改变或添加样式。
+26. container 在中文的字面上是容器的意思，可以把底下子層所有的標籤全部包起來，在給 CSS 命名的時候父層可以用 container 讓標籤語意化。
+28. is created a standard navigation bar 加上role="navigation"，以利無障礙網頁的設計。
+32. navbar-collapse是一個普通的bootstrap選單的語法，會隨著瀏覽器解析度變小，而全部縮成一個小按鈕。
+33. sr-only 的意義就在於能保證螢幕閱讀器正確讀取且不會影響正常人的使用。(為殘疾人士瀏覽網頁設計的)
+34.- 36. <span class="icon-bar"></span>這段這是用來產生「一」，當有三個「一」時，合在一起就會變「三」的按鍵了。
+42. 这个id是bs-example-navbar-collapse-1，上面的collapsed按钮点击，会弹出这个id为bs-example-navbar-collapse-1的div，里面展示内容。
+44. 其作用是插入一个超链接，“#”是默认当前页面，可以把#换成想跳转的页面。
+48. 通过 data 属性：向链接或按钮添加 data-toggle="dropdown" 来切换下拉菜单
+104. data-wow-duration：更改動畫持續時間
+     data-wow-delay：動畫開始前的延遲
+     data-wow-offset：啟動動畫的距離（與瀏覽器底部相關）
+     data-wow-iteration：動畫的重複次數
+117. Youtube iframe API最基本的使用，就是嵌入影片了。
+     API中嵌入影片有二種方式：
+     (1) html中放一個div，由JS去嵌入 
+     (2) html裡直接放個iframe
+119. Node.insertBefore() 方法 (method) 替 Node 元素 (element) 物件 (object) 插入新的子代 (child) 元素。
+     insertBefore() 需要兩個參數
+     parentNode.insertBefore(newElement, referenceElement);
+     parentNode 為呼叫 insertBefore() 的親代元素，第一個參數 newElement 為所要插入的元素物件，第二個參數 referenceElement 則是 newElement 之前的元素物件。
+172. 取消文繞圖 只要在圖片與文字之間加入以下語法即可  <div class="separator" style="clear: both;
+247. target=”_new”   始終在同一個新視窗（重新整理）
+     target=”_blank” 始終產生不同的新視窗
+補充. <p align="center"></p> 將以下內容置中
+補充. <span><img alt="" src="assets/img/news/banner-01-v2.jpg" class="img-rounded img-responsive"></span> 插入圖片
+補充. 如果要使用文繞圖的話，只要加入一段 CSS code 到裡面，如下行紅色 code 所示 <img src="你的圖片路徑" style="float: left">
+補充. target="_blank" 超連結新開視窗
+補充. <hr /> 繪製水平線
+補充. title 這個屬性是用來提供關於該圖片的額外資訊，滑鼠移到影像上方時，會在提示視窗中顯示出此屬性的內容。 例如: <img src="image/logo.jpg" alt="logo" title="形象商標" />
